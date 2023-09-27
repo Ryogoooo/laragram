@@ -28,8 +28,14 @@
             {{ __('Create') }}
           </x-nav-link>
         </div>
-      </div>
-
+      
+        <!-- プロフィール画面へのリンクを追加 -->
+        <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+          <x-nav-link :href="route('mypage')" >
+            {{ __('Mypage') }}
+          </x-nav-link>
+        </div>
+      </div> 
       <!-- Settings Dropdown -->
       <div class="hidden sm:flex sm:items-center sm:ml-6">
         <x-dropdown align="right" width="48">
@@ -92,6 +98,12 @@
     <div class="pt-2 pb-3 space-y-1">
       <x-responsive-nav-link :href="route('post.create')" :active="request()->routeIs('post.create')">
         {{ __('Create') }}
+      </x-responsive-nav-link>
+    </div>
+    <!-- mypageへのリンクを追加 -->
+    <div class="pt-2 pb-3 space-y-1">
+      <x-responsive-nav-link :href="route('mypage')" :active="request()->routeIs('post.create')">
+        {{ __('Mypage') }}
       </x-responsive-nav-link>
     </div>
 

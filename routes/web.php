@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\MypageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,12 @@ use App\Http\Controllers\PostController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::resource('post', PostController::class);
+Route::middleware('auth')->group(function () {
+  Route::resource('post', PostController::class);
+});
+
+Route::get('/mypage', [MypageController::class, 'index'])->name('mypage');
+
 
 Route::get('/', function () {
     return view('welcome');
