@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/mypage', [MypageController::class, 'index'])->name('mypage');
 
+Route::post('/mypage', [MypageController::class, 'store'])->name('icon');
 
 Route::get('/', function () {
     return view('welcome');

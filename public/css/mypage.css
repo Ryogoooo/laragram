@@ -1,0 +1,26 @@
+.box {
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.name {
+    font-size: x-large;
+    margin-left: 100px;
+}
+
+.username {
+    font-size: x-large;
+    padding: 5px;
+    margin-top: 30px;
+    margin-left: 10px;
+    border: solid 1px black;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+.image {
+    font-size: x-large;
+    margin-left: 100px;
+    margin-top: 40px;
+}
