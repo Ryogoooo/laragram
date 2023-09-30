@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\Models\Post;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use app\Models\User;
 
 class PostController extends Controller
 {
@@ -16,7 +17,10 @@ class PostController extends Controller
     {
         //
         $posts = Post::getAllOrderByUpdated_at();
-        return response()->view('post.index',compact('posts'));
+
+        $user_id = Auth::user()->id;
+        $user = User::find($user_id);
+        return response()->view('post.index',compact('posts', 'user'));
     }
 
     /**

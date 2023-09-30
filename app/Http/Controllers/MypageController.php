@@ -17,9 +17,8 @@ class MypageController extends Controller
     }
 
     public function store (Request $request) {
-        $image = $request->file('profile_image')->store('public/image');
-
-        $image_path = str_replace('public/image/', '', $image);
+        $image = $request->file('profile_image')->store('image','public');
+        $image_path = str_replace('image/', '', $image);
 
         $user_id = Auth::user()->id;
         $user = User::find($user_id);

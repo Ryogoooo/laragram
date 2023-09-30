@@ -21,6 +21,10 @@
               @foreach ($posts as $post)
               <tr class="hover:bg-gray-lighter">
                 <td class="py-4 px-6 border-b border-gray-light dark:border-gray-600">
+                  <div class="flex items-center"> <!-- flexとitems-centerを適用 -->
+                    <img src="{{ asset('storage/image/' . $user->icon) }}" width="60" height="60" class="mr-4"> <!-- 画像とテキストの間にマージンを追加 -->
+                    <h3 class="text-left font-bold text-lg text-gray-dark dark:text-gray-200" >{{ $user->name }}</h3>
+                  </div>
                   <h3 class="text-left font-bold text-lg text-gray-dark dark:text-gray-200">{{$post->post}}</h3>
                   <div class="flex">
                     <!-- 更新ボタン -->
@@ -28,6 +32,7 @@
                   </div>
                 </td>
               </tr>
+
               @endforeach
             </tbody>
           </table>
