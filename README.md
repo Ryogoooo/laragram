@@ -1,66 +1,57 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# データエンジニアカタパルト Phase01 課題
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 挑戦した課題（どちらかに ✅）
 
-## About Laravel
+[] 初級
+[✅] 上級
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 実装した内容
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 実装した内容を書いてください．
+・ユーザーのアイコン設定機能を実装。
+・Mypageの実装。
+・Mypageにおいて、ログインユーザーの名前、アイコン、アイコンを作るためのお絵かき機能を実装。
+・Index画面において、投稿ユーザーのアイコン、名前を表示させた。
+・Index画面において、投稿の下に返信フォームを追加し、親ツイートの下に返信を表示させた。
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## デプロイ先の URL または画面収録したファイル名
 
-## Learning Laravel
+hogehoge.mp4
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 使い方
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+実装した機能の使い方を記述してください．画面収録で提出する場合は，ここに書いた内容に従って収録してください．
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+１．アカウントを作成
+２．Mypageにてアイコンを描き、アイコンの登録。
+３．Createでツイートを作成
+４．Indexでツイート一覧を見る。
+５．返信する。
 
-## Laravel Sponsors
+## 工夫した点
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- 工夫した点を書いてください（必須）．
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+ユーザーが自分の描いた絵でアイコンを作成できるようにしたこと。さらに返信機能をつけることでユーザー同士の
 
-## Contributing
+繋がりを促進した。手書きのアイコンには愛着と個性が出るので、人それぞれユニークなアイコンになって面白いと
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+思った。
 
-## Code of Conduct
+## 苦戦した点
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- 苦戦した点を書いてください（必須）．課題の内容に限らず，Phase01 全体を振り返っての内容でも OK です．
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+アイコンの実装がなかなか手間取った。まず、画像を直接DBに保存するのではなく、画像は公開ディレクトリに保存
 
-## License
+しておいて画像パスのみをDBに保存するという知識を手に入れた。それにあたることをネットで調べるがネットは手
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+取り足取り教えてくれる訳ではないので、いろんなサイトをハシゴしながら、chatgptに聞きまくりながら何時間か
+
+かけて完成。
+
+Tailwind cssも厄介だった。よくわからない理由で枠の色などの変更が適用されず、結局styleで指定したので、未
+
+だによくわかってない。

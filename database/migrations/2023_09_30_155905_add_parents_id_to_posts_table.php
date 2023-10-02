@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             //
-            $table->string('icon')->default('nlpuWmBrNvJJX3Yn6eTCYH86yDxLBDSzV5yhr43O.png');
+            $table->unsignedBigInteger('parent_id')->nullable();
         });
     }
 
@@ -22,9 +22,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             //
-            $table->dropColumn(['icon']);
+            $table->dropColumn(['parent_id']);
         });
     }
 };

@@ -19,11 +19,7 @@
               <x-text-input id="post" class="block mt-1 w-full" type="text" name="post" :value="old('post')" required autofocus />
               <x-input-error :messages="$errors->get('post')" class="mt-2" />
             </div>
-            <div class="flex flex-col mb-4">
-              <x-input-label for="description" :value="__('Description')" />
-              <x-text-input id="description" class="block mt-1 w-full" type="text" name="description" :value="old('description')" required autofocus />
-              <x-input-error :messages="$errors->get('description')" class="mt-2" />
-            </div>
+            
             <div class="flex items-center justify-end mt-4">
               <x-primary-button class="ml-3">
                 {{ __('Create') }}

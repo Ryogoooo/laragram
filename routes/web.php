@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\MypageController;
+use App\Http\Controllers\ReplyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ use App\Http\Controllers\MypageController;
 Route::middleware('auth')->group(function () {
   Route::resource('post', PostController::class);
 });
+
+Route::post('/posts/{post}/reply', [ReplyController::class, 'store'])->name('reply.store');
 
 Route::get('/mypage', [MypageController::class, 'index'])->name('mypage');
 

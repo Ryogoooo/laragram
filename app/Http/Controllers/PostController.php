@@ -40,7 +40,7 @@ class PostController extends Controller
         // バリデーション
         $validator = Validator::make($request->all(), [
             'post' => 'required | max:191',
-            'description' => 'required',
+            
         ]);
         // バリデーション:エラー
         if ($validator->fails()) {
