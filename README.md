@@ -16,7 +16,7 @@
 
 ## デプロイ先の URL または画面収録したファイル名
 
-hogehoge.mp4
+laragram.mp4
 
 ## 使い方
 
